@@ -64,6 +64,7 @@ class ListNode:
         self.next = next
 
 class Solution:
+    """ O(n); swap 2 lists if needed to ensure l1 is no shorter than l2 """
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         # NOTE: though there is a trick that current = self, but the
         # stupid method head = ListNode(-1) seems to save more space than
@@ -95,9 +96,7 @@ class Solution:
         return head.next
 # @lc code=end
 
-"""
-Accepted
-1568/1568 cases passed (72 ms)
-Your runtime beats 53.06 % of python3 submissions
-Your memory usage beats 98.21 % of python3 submissions (14.1 MB)
-"""
+# Accepted
+# 1568/1568 cases passed (72 ms)
+# Your runtime beats 53.06 % of python3 submissions
+# Your memory usage beats 98.21 % of python3 submissions (14.1 MB)

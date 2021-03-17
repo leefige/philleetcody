@@ -58,6 +58,7 @@
 
 # @lc code=start
 class Solution:
+    """ O(n) using hash table (dict/map) """
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         # remainder -> idx
         waiting = {}
@@ -74,9 +75,7 @@ class Solution:
 
 # @lc code=end
 
-"""
-Accepted
-53/53 cases passed (48 ms)
-Your runtime beats 65.32 % of python3 submissions
-Your memory usage beats 46.77 % of python3 submissions (14.5 MB)
-"""
+# Accepted
+# 53/53 cases passed (48 ms)
+# Your runtime beats 65.32 % of python3 submissions
+# Your memory usage beats 46.77 % of python3 submissions (14.5 MB)
