@@ -74,6 +74,9 @@ from typing import List
 
 # @lc code=start
 class Solution:
+    """
+    Use binary search to find an `i', which is O(log(m+n)).
+    """
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         if len(nums1) > len(nums2):
             nums1, nums2 = nums2, nums1
@@ -94,6 +97,7 @@ class Solution:
 
         # nums1 : [0, i-1], [i, len1-1]
         # nums2 : [0, j-1], [j, len2-1]
+        # use bin search to find such i
         left_i = 0
         right_i = len1
         while left_i <= right_i:
