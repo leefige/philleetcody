@@ -50,7 +50,8 @@ class Solution:
     """
     O(n): 2 pointers to scan the height array
     From 2 ends to center, for left border you know the max height
-    on its left, for right border you know the max height on its right.
+    on its left, for right border you know the max height on its right
+    (including left/right themselves).
 
     For left, its left_max_i = l_max; you also know its right_max_i >= r_max,
     so if l_max < r_max, then left_max_i < right_max_i, and trapped water at
@@ -65,8 +66,8 @@ class Solution:
 
         # size >= 3
         trapped = 0
-        l_max, r_max = height[0], height[-1]
-        left, right = 1, size - 2
+        l_max, r_max = -1, -1
+        left, right = 0, size - 1
         while left <= right:
             l_max = max(l_max, height[left])
             r_max = max(r_max, height[right])
@@ -85,6 +86,6 @@ class Solution:
 # @lc code=end
 
 # Accepted
-# 320/320 cases passed (48 ms)
-# Your runtime beats 91.24 % of python3 submissions
-# Your memory usage beats 86.06 % of python3 submissions (14.8 MB)
+# 320/320 cases passed (44 ms)
+# Your runtime beats 97.96 % of python3 submissions
+# Your memory usage beats 37.41 % of python3 submissions (14.9 MB)
